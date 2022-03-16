@@ -1,0 +1,98 @@
+version: "3.0"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: sad path 3
+#   steps:
+#   - intent: greet
+#   - action: utter_greet2
+#   - intent: insurance_buy
+#   - action: insurance_form
+#   - action: form{"name":"insurance_form"}
+#   - action: form{"name":null}
+#   - action: utter_slot_values
+#   - action: submit_insurance_form
+#   - action: utter_slot_values
+
+# - story: member wants a new insurance quote (happy path)
+#   steps:
+#   - intent: greet
+#   - action: utter_greet2
+#   - intent: insurance_buy
+#   - action: insurance_form
+#   - active_loop: insurance_form
+#   - active_loop: null
+#   - action: submit_insurance_form
+#   - action: utter_slot_values
+
+- story: story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet2
+  - intent: insurance_buy
+  - action: insurance_form
+  - active_loop: insurance_form
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: Ahmad Arif
+  - slot_was_set:
+    - requested_slot: license_plate
+  - slot_was_set:
+    - license_plate: UP53CE6114
+  - slot_was_set:
+    - requested_slot: registration_date
+  - slot_was_set:
+    - registration_date: 2018
+  - slot_was_set:
+    - requested_slot: driving_license
+  - slot_was_set:
+    - driving_license: 43534656456
+  - slot_was_set:
+    - requested_slot: types
+  - slot_was_set:
+    - types: Comprehensive
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  # - action: submit_insurance_form 
+  - action: submit_insurance_form
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_insurance
+  - action: utter_goodbye

@@ -1,0 +1,180 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: out_of_scope
+  examples: |
+    - Can you add 2+2
+    - Can you show me the score for football
+    - Where is Ukraine located
+    - Tell me the news
+    - Is it raining outside
+
+- intent: send_email
+  examples: |
+    - send mail
+    - send a mail
+    - mail
+    - I want to send a mail
+
+- intent: inform_types
+  examples: |
+    - [Comprehensive](types)
+    - [Standalone Own](types)
+    - [Standalone Third-party](types)
+
+- intent: inform_comp
+  examples: |
+    - Comprehensive
+
+- intent: inform_stand
+  examples: |
+    - Standalone Own
+
+- intent: inform_third
+  examples: |
+    - Standalone Third-party
+
+
+- intent: insurance_buy
+  examples: |
+    - i want to buy a insurance
+    - buy insurance
+    - book insurance
+
+- intent: check_insurance
+  examples: |
+    - check my insurance validity
+    - validty of insurance
+    - date of expiry of insurance
+    - expiry date of insurance policy
+    
+- intent: inform_name
+  examples: |
+    - [Ahmad Arif](name)
+    - [Piyush](name)
+    - [Naveen](name)
+    - [Abhishek](name)
+    - [Vinay Pratap](name)
+    - [Ayan](name)
+    - [Faizan](name)
+    - [Saif](name)
+    - [Saqlain](name)
+    - [Ali Siddiqui](name)
+    - [gaurav](name)
+    
+
+- intent: inform_registration_date
+  examples: |
+    - [14 January 2018](registration_date)
+    - [23 March 2020](registration_date)
+    - [23 September 2020](registration_date)
+    - [07 September 2020](registration_date)
+    - [17 August 2016](registration_date)
+
+- intent: inform_license_plate
+  examples: |
+    - [UP53CE6114](license_plate)
+    - [MP54FD4643](license_plate)
+    - [HR67DF7686](license_plate)
+    - [DL56GH3425](license_plate)
+    - [BR23SA5466](license_plate)
+
+- intent:  inform_driving_license
+  examples: |
+    - [43534656456](driving_license)
+    - [54666564456](driving_license)
+    - [54654733544](driving_license)
+    - [85747323666](driving_license)
+    - [45674574523](driving_license)
+    - [34566585685](driving_license)
+    - [35867598808](driving_license)
+    - [64776487987](driving_license)

@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-license_plate",
+      "2": "I-license_plate",
+      "3": "L-license_plate",
+      "4": "U-license_plate",
+      "5": "B-name",
+      "6": "I-name",
+      "7": "L-name",
+      "8": "U-name",
+      "9": "B-registration_date",
+      "10": "I-registration_date",
+      "11": "L-registration_date",
+      "12": "U-registration_date",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-license_plate": 1,
+      "I-license_plate": 2,
+      "L-license_plate": 3,
+      "U-license_plate": 4,
+      "B-name": 5,
+      "I-name": 6,
+      "L-name": 7,
+      "U-name": 8,
+      "B-registration_date": 9,
+      "I-registration_date": 10,
+      "L-registration_date": 11,
+      "U-registration_date": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

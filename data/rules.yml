@@ -1,0 +1,30 @@
+version: "3.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: Activate form
+  steps:
+  - intent: insurance_buy
+  - action: insurance_form
+  - active_loop: insurance_form
+
+- rule: Submit form
+  condition:
+  - active_loop: insurance_form
+  steps:
+  - action: insurance_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: submit_insurance_form
