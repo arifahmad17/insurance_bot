@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-driving_license",
+      "2": "I-driving_license",
+      "3": "L-driving_license",
+      "4": "U-driving_license",
+      "5": "B-license_plate",
+      "6": "I-license_plate",
+      "7": "L-license_plate",
+      "8": "U-license_plate",
+      "9": "B-name",
+      "10": "I-name",
+      "11": "L-name",
+      "12": "U-name",
+      "13": "B-registration_date",
+      "14": "I-registration_date",
+      "15": "L-registration_date",
+      "16": "U-registration_date",
+      "17": "B-types",
+      "18": "I-types",
+      "19": "L-types",
+      "20": "U-types",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-driving_license": 1,
+      "I-driving_license": 2,
+      "L-driving_license": 3,
+      "U-driving_license": 4,
+      "B-license_plate": 5,
+      "I-license_plate": 6,
+      "L-license_plate": 7,
+      "U-license_plate": 8,
+      "B-name": 9,
+      "I-name": 10,
+      "L-name": 11,
+      "U-name": 12,
+      "B-registration_date": 13,
+      "I-registration_date": 14,
+      "L-registration_date": 15,
+      "U-registration_date": 16,
+      "B-types": 17,
+      "I-types": 18,
+      "L-types": 19,
+      "U-types": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

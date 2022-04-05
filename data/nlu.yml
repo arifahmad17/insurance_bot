@@ -1,5 +1,4 @@
 version: "3.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,6 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
 - intent: goodbye
   examples: |
     - cu
@@ -29,7 +27,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -38,7 +35,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -48,7 +44,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -65,7 +60,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -82,14 +76,12 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: out_of_scope
   examples: |
     - Can you add 2+2
@@ -97,61 +89,61 @@ nlu:
     - Where is Ukraine located
     - Tell me the news
     - Is it raining outside
-
 - intent: send_email
   examples: |
     - send mail
     - send a mail
     - mail
     - I want to send a mail
-
 - intent: inform_types
   examples: |
     - [Comprehensive](types)
     - [Standalone Own](types)
     - [Standalone Third-party](types)
-
 - intent: inform_comp
   examples: |
     - Comprehensive
-
+    - comprehensive
 - intent: inform_stand
   examples: |
     - Standalone Own
-
+    - standalone
 - intent: inform_third
   examples: |
     - Standalone Third-party
-
-
+    - standalone third party
+- intent: insurance
+  examples: |
+    - I want to buy a insurance
+    - Car Insurance
+    - Insurance about car
+    - Insurance
+    - Buy a car insurance
 - intent: insurance_buy
   examples: |
-    - i want to buy a insurance
     - buy insurance
     - book insurance
-
 - intent: check_insurance
   examples: |
     - check my insurance validity
     - validty of insurance
     - date of expiry of insurance
     - expiry date of insurance policy
-    
 - intent: inform_name
   examples: |
-    - [Ahmad Arif](name)
-    - [Piyush](name)
-    - [Naveen](name)
-    - [Abhishek](name)
-    - [Vinay Pratap](name)
-    - [Ayan](name)
-    - [Faizan](name)
-    - [Saif](name)
-    - [Saqlain](name)
-    - [Ali Siddiqui](name)
-    - [gaurav](name)
-    
-
+    - Ahmad Arif
+    - Piyush
+    - Naveen
+    - Abhishek
+    - Vinay Pratap
+    - Ayan
+    - Faizan
+    - Saif
+    - Saqlain
+    - Ali Siddiqui
+    - gaurav
+    - Ahmad
+    - Prakash
 - intent: inform_registration_date
   examples: |
     - [14 January 2018](registration_date)
@@ -159,7 +151,6 @@ nlu:
     - [23 September 2020](registration_date)
     - [07 September 2020](registration_date)
     - [17 August 2016](registration_date)
-
 - intent: inform_license_plate
   examples: |
     - [UP53CE6114](license_plate)
@@ -167,8 +158,8 @@ nlu:
     - [HR67DF7686](license_plate)
     - [DL56GH3425](license_plate)
     - [BR23SA5466](license_plate)
-
-- intent:  inform_driving_license
+    - [BR23SA5466](license_plate)
+- intent: inform_driving_license
   examples: |
     - [43534656456](driving_license)
     - [54666564456](driving_license)

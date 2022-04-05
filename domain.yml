@@ -1,178 +1,119 @@
-version: "3.0"
-
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - out_of_scope
-  - insurance_buy
-  - check_insurance
-  - inform_registration_date
-  - inform_license_plate
-  - inform_driving_license
-  - inform_name
-  - inform_types
-  
+- inform_license_plate
+- greet
+- check_insurance
+- inform_name
+- insurance
+- inform_types
+- inform_registration_date
+- insurance_buy
+- inform_driving_license
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- out_of_scope
 entities:
-  - name
-  - license_plate
-  - registration_date
-  - driving_license
-  - types
-  
-actions:
-  # - validate_insurance_form
-  # - submit_insurance_form
-  - utter_slot_values
-  - utter_greet2
-  - utter_submit
-  - validate_insurance_form
-  - submit_insurance_form
-
+- driving_license
+- license_plate
+- registration_date
+- types
 slots:
   name:
     type: text
     influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: name
-      conditions:
-      - active_loop: insurance_form
-        requested_slot: name
-
-
-
+    - type: from_text
+      intent: inform_name
   registration_date:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: registration_date
-      conditions:
-      - active_loop: insurance_form
-        requested_slot: registration_date
-  
-
   driving_license:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: driving_license
-      conditions:
-      - active_loop: insurance_form
-        requested_slot: driving_license
-
   license_plate:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: license_plate
-      conditions:
-      - active_loop: insurance_form
-        requested_slot: license_plate
   types:
     type: text
     influence_conversation: true
     mappings:
     - type: from_entity
       entity: types
-      conditions:
-      - active_loop: insurance_form
-        requested_slot: types
-
-  # requested_slot:
-  #   type: categorical
-  #   influence_conversation: true
-  #   values:
-  #     - name
-  #     - registration_date
-  #     - driving_license
-  #     - license_plate
-      
-
 responses:
-  utter_greet:
-  - text: "Hi I'm Insurance Bot your assistant to help you on any insurance related issue."
-
-  utter_greet2:
-  - text: "I'll need some inputs from you to provide."
+  utter_insurance:
+  - text: I'll need some inputs from you to provide.
     buttons:
-    - title: "Book Insurance"
-      payload: "/insurance_buy"
-    - title: "Check Insurance"
-      payload: "/check_insurance"
+    - title: Book Insurance
+      payload: /insurance_buy
+    - title: Check Insurance
+      payload: /check_insurance
   utter_ask_name:
-  - text: "What's your name ?"
-
+  - text: What's your name ?
   utter_ask_license_plate:
-  - text: " Hi {name} ,what is your license plate number ?"
-
+  - text: ' Hi {name} ,what is your license plate number ?'
   utter_ask_driving_license:
-  - text: " What is your DL no ?"
-  
+  - text: ' What is your DL no ?'
   utter_ask_registration_date:
-  - text: " What is the registration date of the vehicle ?"
-
+  - text: ' What is the registration date of the vehicle ?'
   utter_slot_values:
-  - text: "Name: {name} , DL: {driving_license}, registration: {registration_date} , License : {license_plate} , Type: {types}"
+  - text: 'Name: {name} , DL: {driving_license}, registration: {registration_date} , License : {license_plate} , Type: {types}'
   utter_ask_types:
-  - text: "Which plan would you like to take"
+  - text: Which plan would you like to take
     buttons:
-    - title: "Comprehensive"
-      payload: '/inform_types{{"types":"Comprehensive"}}'
-    - title: "Standalone Own"
-      payload: '/inform_types{{"types":"Standalone Own"}}'
-    - title: "Standalone Third-party"
-      payload: '/inform_types{{"types":"Standalone Third-party"}}'
-  
+    - title: Comprehensive
+      payload: /inform_types{{"types":"Comprehensive"}}
+    - title: Standalone Own
+      payload: /inform_types{{"types":"Standalone Own"}}
+    - title: Standalone Third-party
+      payload: /inform_types{{"types":"Standalone Third-party"}}
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
+  - text: Great, carry on!
   utter_submit:
   - text: Ok. Thanks!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
+  utter_greet:
+  - text: I am fine
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-  
-  # utter_ask_email:
-  # - text: "what is the email you want to send the message"
-
-  # utter_ask_subject:
-  # - text: "What is the subject"
-
-  # utter_ask_message:
-  # - text: "What is the message"
-
-  # utter_send:
-  # - text: "Would you like to send the mail"
-
-  # utter_out_of_scope:
-  # - text: "I'm sorry, this Email bot can't handle that input."
-
+  - text: I am a bot, powered by Rasa.
+actions:
+- submit_check_form
+- submit_insurance_form
+- utter_goodbye
+- utter_greet
+- utter_insurance
+- validate_check_form
+- validate_insurance_form
 forms:
   insurance_form:
     required_slots:
-        - name
-        - registration_date
-        - driving_license
-        - license_plate
-        - types
-
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+    - name
+    - registration_date
+    - driving_license
+    - license_plate
+    - types
+  check_form:
+    required_slots:
+    - name
+    - license_plate
